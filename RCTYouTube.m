@@ -260,7 +260,7 @@
     if (_onProgress) {
         _onProgress(@{
             @"currentTime": @(currentTime),
-            @"duration": @(self.duration),
+//            @"duration": @(self.duration),
             @"target": self.reactTag
         });
     }

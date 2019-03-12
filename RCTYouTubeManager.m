@@ -87,13 +87,13 @@ RCT_EXPORT_METHOD(videosIndex:(nonnull NSNumber *)reactTag resolver:(RCTPromiseR
     [self.bridge.uiManager addUIBlock:^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, UIView *> *viewRegistry) {
         RCTYouTube *youtube = (RCTYouTube*)viewRegistry[reactTag];
         if ([youtube isKindOfClass:[RCTYouTube class]]) {
-            NSNumber *index = [NSNumber numberWithInt:[youtube playlistIndex]];
-            if (index) {
-                resolve(index);
-            } else {
-                NSError *error = nil;
-                reject(@"Error getting index of video from RCTYouTube", @"", error);
-            }
+//            NSNumber *index = [NSNumber numberWithInt:[youtube playlistIndex]];
+//            if (index) {
+//                resolve(index);
+//            } else {
+//                NSError *error = nil;
+//                reject(@"Error getting index of video from RCTYouTube", @"", error);
+//            }
         } else {
             RCTLogError(@"Cannot videosIndex: %@ (tag #%@) is not RCTYouTube", youtube, reactTag);
         }
@@ -105,13 +105,13 @@ RCT_EXPORT_METHOD(currentTime:(nonnull NSNumber *)reactTag resolver:(RCTPromiseR
     [self.bridge.uiManager addUIBlock:^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, UIView *> *viewRegistry) {
         RCTYouTube *youtube = (RCTYouTube*)viewRegistry[reactTag];
         if ([youtube isKindOfClass:[RCTYouTube class]]) {
-            NSNumber *index = [NSNumber numberWithInt:[youtube currentTime]];
-            if (index) {
-                resolve(index);
-            } else {
-                NSError *error = nil;
-                reject(@"Error getting current time of video from RCTYouTube", @"", error);
-            }
+//            NSNumber *index = [NSNumber numberWithInt:[youtube currentTime]];
+//            if (index) {
+//                resolve(index);
+//            } else {
+//                NSError *error = nil;
+//                reject(@"Error getting current time of video from RCTYouTube", @"", error);
+//            }
         } else {
             RCTLogError(@"Cannot currentTime: %@ (tag #%@) is not RCTYouTube", youtube, reactTag);
         }
